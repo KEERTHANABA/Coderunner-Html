@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEARNING CENTER</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+  </head>
+  <body>
+    <nav>
+        <div class="menu-icon">
+           <span class="fas fa-bars"></span>
+        </div>
+        <div class="logo">KALVIUM
+        </div>
+        <div class="nav-items">
+           <li><a href="index.html">Home</a></li>
+           <li><a href="#about">About</a></li>
+           <li><a href="#contact">Contact</a></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li><a href="login.html">Log In</a></li>
+
+        </div>
+    
+     </nav>
+     <div class="content">
+    
+     </div>
+     <script>
+        const menuBtn = document.querySelector(".menu-icon span");
+        const searchBtn = document.querySelector(".search-icon");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        const items = document.querySelector(".nav-items");
+        const form = document.querySelector("form");
+        menuBtn.onclick = ()=>{
+          items.classList.add("active");
+          menuBtn.classList.add("hide");
+          searchBtn.classList.add("hide");
+          cancelBtn.classList.add("show");
+        }
+        cancelBtn.onclick = ()=>{
+          items.classList.remove("active");
+          menuBtn.classList.remove("hide");
+          searchBtn.classList.remove("hide");
+          cancelBtn.classList.remove("show");
+          form.classList.remove("active");
+          cancelBtn.style.color = "#ff3d00";
+        }
+        searchBtn.onclick = ()=>{
+          form.classList.add("active");
+          searchBtn.classList.add("hide");
+          cancelBtn.classList.add("show");
+        }
+     </script>
+    <section class="sec-01">
+      <div class="container">
+        <h2 class="main-title">KALVIUM</h2>
+        <div class="content">
+          <div class="image">
+            <img src="images/img1.webp"  alt="">
+          </div>
+          <div class="text-box" style="background-color: #1112229e;"> 
+            <h3>KALVIUM</h3>
+            <p >Kalvium is an Edu-tech company, On a quest to transform the higher education space in India by offering India’s 1st Liberal Engineering program in Computer Science with a work-integrated learning curriculum. With a mission to help young minds transform into thriving future tech leaders, Kalvium offers its 4-years on-campus program in collaboration with top accredited Universities in the country.</p>
+          </div>
+        </div>
+        <div class="media-icons">
+          <a href="https://www.facebook.com/Kalvium/" class="icon"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/kalvium_edu/" class="icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/kalvium_edu?lang=en" class="icon"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.youtube.com/c/KalviEducation" class="icon"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </section>
+    <span id="about">
+    <section class="sec-02">
+      <div class="container">
+        <h3 class="section-title">ABOUT</h3>
+        <div class="content">
+          <div class="image">
+            <img src="images/about.jpg" alt="">
+          </div>
+          <div class="info">
+            <h4 class="info-title"></h4>
+            <p>Kalvium is trusted and backed by India's top technology leaders including Anupam Mittal (Founder, People Group), Sujeet Kumar (Co-founder at Udaan), Kunal Shah (Founder at CRED), Nithin Kamath (CEO at Zerodha), Rahul Chari (CTO at PhonePe), and many more. The founding team is a bunch of non-practicing engineers, inspired to make a difference in the education space and are experts in the field having a track record of training and placing over 50 Lakh students in more than 500+ industries in the past 13 years under their Coimbatore-based Startups FACE Prep & ProGrad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+</span>
+    <span id="contact">
+    <section class="sec-03">
+      <div class="container">
+        <h3 class="section-title">CONTACT</h3>
+        <div class="content">
+          <div class="media-info">
+            <li><a href="https://www.facebook.com/Kalvium/"><i class="fab fa-facebook"></i> Facebook</a></li>
+            <li><a href="https://www.instagram.com/kalvium_edu/"><i class="fab fa-instagram"></i> Instagram</a></li>
+            <li><a href="https://twitter.com/kalvium_edu?lang=en"><i class="fab fa-twitter"></i> Twitter</a></li>
+            <li><a href="https://www.youtube.com/c/KalviEducation"><i class="fab fa-youtube"></i> Youtube</a></li>
+            <li><a href="https://www.linkedin.com/school/kalvium/about/"><i class="fab fa-linkedin"></i> Linkedin</a></li>
+          </div>
+          <div class="image">
+            <img src="images/contact.webp" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+</span>
+
+    <script>
+      //common reveal options to create reveal animations
+      ScrollReveal({
+        //reset: true,
+        distance: '60px',
+        duration: 2500,
+        delay: 400
+      });
+
+      //target elements, and specify options to create reveal animations
+      ScrollReveal().reveal('.main-title, .section-title', { delay: 500, origin: 'left' });
+      ScrollReveal().reveal('.sec-01 .image, .info', { delay: 600, origin: 'bottom' });
+      ScrollReveal().reveal('.text-box', { delay: 700, origin: 'right' });
+      ScrollReveal().reveal('.media-icons i', { delay: 500, origin: 'bottom', interval: 200 });
+      ScrollReveal().reveal('.sec-02 .image, .sec-03 .image', { delay: 500, origin: 'top' });
+      ScrollReveal().reveal('.media-info li', { delay: 500, origin: 'left', interval: 200 });
+    </script>
+
+  </body>
+</html>
+      
